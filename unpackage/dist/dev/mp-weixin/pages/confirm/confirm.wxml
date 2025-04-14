@@ -1,0 +1,1 @@
+<view class="container data-v-eec36e84"><text class="title data-v-eec36e84">准备就绪</text><text class="message data-v-eec36e84">即将开始生成话术，请点击"开始"继续！</text><view class="next-button data-v-eec36e84" bindtap="{{a}}">开始</view></view>

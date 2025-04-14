@@ -1,0 +1,13 @@
+<template>
+  <你好
+</template>
+
+<script>
+  export default {
+    // 这里是页面逻辑
+  }
+</script>
+
+<style scoped>
+  /* 这里是样式 */
+</style>

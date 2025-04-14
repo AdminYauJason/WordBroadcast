@@ -1,0 +1,141 @@
+
+.container {
+  background-color: #f6f8fe;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to bottom, #4a90e2, #ffffff);
+  display: flex;
+  align-items: center;
+  padding: 0.625rem;
+  box-shadow: 0 0.0625rem 0.3125rem rgba(0, 0, 0, 0.1);
+  min-height: 3.75rem;
+  z-index: 100;
+}
+.nav_image {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.625rem;
+  border-radius: 50%;
+}
+.nav_text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.625rem;
+}
+.main_text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  line-height: 1.2;
+}
+.sub_text {
+  font-size: 0.75rem;
+  color: #666666;
+  margin-top: 0.125rem;
+}
+.stop_button {
+  font-size: 0.75rem;
+  color: #ffffff;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  height: 1.75rem;
+  min-width: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto; /* 将按钮推到右边 */
+  transition: all 0.2s ease;
+}
+.stop_button:active {
+  background-color: #c0392b;
+  transform: scale(0.95);
+}
+.chat_content {
+  flex: 1;
+  padding: 1.25rem 0.625rem 0.625rem;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
+}
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.625rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.robot-message {
+  justify-content: flex-start;
+}
+.user-message {
+  justify-content: flex-end;
+}
+.robot_avatar {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.message_text {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  max-width: 70%;
+  word-break: break-word;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background-color: #fff;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05);
+  white-space: pre-wrap;
+}
+.user-text {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+.floating-button-wrapper {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 100;
+}
+.floating-button {
+  width: 7.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: #ffffff;
+  border: none;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 0.125rem 0.375rem rgba(74, 144, 226, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: float 3s ease-in-out infinite;
+}
+.floating-button:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 0.5rem rgba(74, 144, 226, 0.4);
+}
+.floating-button:active {
+  transform: translateY(0.0625rem);
+  box-shadow: 0 0.0625rem 0.25rem rgba(74, 144, 226, 0.2);
+}
+@keyframes float {
+0%, 100% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-0.0625rem);
+}
+}
+

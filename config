@@ -1,0 +1,10 @@
+[core]
+	bare = true
+	repositoryformatversion = 0
+	filemode = false
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = http://111.231.63.126:82/rdc/dachuang/alive-front.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	pushurl = http://111.231.63.126:82/rdc/dachuang/alive-front.git

@@ -1,0 +1,1 @@
+<view class="container"><view class="header"><text>直播记录</text></view><view class="record-list"><view wx:for="{{a}}" wx:for-item="record" wx:key="c" class="record-item"><text>直播间ID: {{record.a}}</text><text>开始时间: {{record.b}}</text></view></view></view>

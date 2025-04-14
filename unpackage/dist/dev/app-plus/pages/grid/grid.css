@@ -1,0 +1,202 @@
+
+.container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 动画背景 */
+.animated-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 15s infinite ease-in-out;
+}
+.circle-1 {
+  width: 9.375rem;
+  height: 9.375rem;
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  top: -3.125rem;
+  left: -3.125rem;
+  animation-delay: 0s;
+}
+.circle-2 {
+  width: 12.5rem;
+  height: 12.5rem;
+  background: linear-gradient(45deg, #4361ee, #3f37c9);
+  bottom: -4.6875rem;
+  right: -4.6875rem;
+  animation-delay: -5s;
+}
+.circle-3 {
+  width: 6.25rem;
+  height: 6.25rem;
+  background: linear-gradient(45deg, #4895ef, #3f37c9);
+  top: 40%;
+  left: 60%;
+  animation-delay: -10s;
+}
+@keyframes float {
+0%, 100% {
+    transform: translateY(0) rotate(0deg);
+}
+50% {
+    transform: translateY(0.9375rem) rotate(10deg);
+}
+}
+.input_container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 1.25rem;
+  min-height: 100vh;
+}
+.form-card {
+  width: 90%;
+  max-width: 18.75rem;
+  background: rgba(30, 41, 59, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 0.9375rem;
+  padding: 1.25rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: card-appear 0.6s ease-out;
+}
+@keyframes card-appear {
+from {
+    opacity: 0;
+    transform: translateY(0.625rem);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+.title {
+  font-size: 1.3125rem;
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;  /* 使用 flex 布局 */
+  justify-content: center;  /* 水平居中 */
+  align-items: center;  /* 垂直居中 */
+  text-align: center;  /* 确保文本对齐 */
+  margin-bottom: 1.5625rem;
+  letter-spacing: 0.0625rem;
+  text-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);
+  width: 100%;  /* 使标题占满父容器的宽度 */
+  height: 1.5625rem;  /* 设置高度以帮助垂直居中 */
+}
+.input-group {
+  margin-bottom: 0.9375rem;
+  animation: slide-up 0.5s ease-out;
+}
+@keyframes slide-up {
+from {
+    opacity: 0;
+    transform: translateY(0.3125rem);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+.label {
+  font-size: 0.9375rem;
+  color: #e2e8f0;
+  margin-bottom: 0.625rem;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.03125rem;
+}
+.textarea_box {
+  width: 90%;
+  min-height: 5.625rem;
+  padding: 0.625rem 0.9375rem;
+  font-size: 0.875rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  margin-bottom: 0.9375rem;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  line-height: 1.6;
+}
+.textarea_box:focus {
+  border-color: #4895ef;
+  box-shadow: 0 0 0 0.0625rem rgba(72, 149, 239, 0.2);
+  transform: translateY(-0.0625rem);
+  background: rgba(15, 23, 42, 0.8);
+}
+.placeholder-style {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8125rem;
+}
+.room_id_input {
+  width: 90%;
+  height: 2.5rem;
+  padding: 0 0.9375rem;
+  font-size: 0.875rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  margin-bottom: 0.625rem;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+.confirm_button {
+  width: 90%;
+  height: 2.75rem;
+  background: linear-gradient(135deg, #4895ef 0%, #4361ee 100%);
+  color: white;
+  border: none;
+  border-radius: 1.375rem;
+  font-size: 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.confirm_button_active {
+  transform: translateY(-0.0625rem);
+  box-shadow: 0 0.1875rem 0.625rem rgba(72, 149, 239, 0.3);
+}
+.button-hover {
+  transform: translateY(0.0625rem);
+  box-shadow: 0 0.0625rem 0.3125rem rgba(72, 149, 239, 0.2);
+  opacity: 0.9;
+}
+.button-arrow {
+  margin-left: 0.3125rem;
+  transition: transform 0.3s ease;
+}
+.confirm_button:active .button-arrow {
+  transform: translateX(0.3125rem);
+}
+
+/* 输入框聚焦动画 */
+@keyframes input-focus {
+0% { transform: scale(1);
+}
+50% { transform: scale(1.02);
+}
+100% { transform: scale(1);
+}
+}
+.input_box:focus, .room_id_input:focus {
+  animation: input-focus 0.3s ease;
+}

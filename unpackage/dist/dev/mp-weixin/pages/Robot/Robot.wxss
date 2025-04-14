@@ -1,0 +1,110 @@
+
+.container {
+  background-color: #f6f8fe;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(to bottom, #4a90e2, #ffffff);
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  min-height: 120rpx;
+  z-index: 100;
+}
+.nav_image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+.nav_text {
+  flex: 1;
+}
+.main_text {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.sub_text {
+  font-size: 24rpx;
+  color: #666666;
+  margin-top: 8rpx;
+}
+.chat_content {
+  flex: 1;
+  padding: 40rpx 20rpx 20rpx;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
+}
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20rpx;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.robot-message {
+  justify-content: flex-start;
+}
+.user-message {
+  justify-content: flex-end;
+}
+.robot_avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+.message_text {
+  padding: 16rpx 24rpx;
+  border-radius: 24rpx;
+  max-width: 70%;
+  word-break: break-word;
+  font-size: 28rpx;
+  line-height: 1.4;
+  background-color: #fff;
+  box-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.05);
+}
+.user-text {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+.floating-button-wrapper {
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+  z-index: 100;
+}
+.floating-button {
+  width: 240rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  box-shadow: 0 4rpx 12rpx rgba(74, 144, 226, 0.3);
+  transition: all 0.3s ease;
+}
+.button-hover {
+  transform: translateY(2rpx);
+  box-shadow: 0 2rpx 6rpx rgba(74, 144, 226, 0.2);
+}
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    transform: translateY(10rpx);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}

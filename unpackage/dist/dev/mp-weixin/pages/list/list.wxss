@@ -1,0 +1,42 @@
+@import "../../nvue.wxss";
+
+.container.data-v-96c6bf44 {
+  padding: 20px;
+  padding-top: 40px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+.features.data-v-96c6bf44, .steps.data-v-96c6bf44 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.feature-item.data-v-96c6bf44, .step-item.data-v-96c6bf44 {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+.feature-icon.data-v-96c6bf44, .step-icon.data-v-96c6bf44 {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.feature-title.data-v-96c6bf44, .step-title.data-v-96c6bf44 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.feature-description.data-v-96c6bf44, .step-description.data-v-96c6bf44 {
+  font-size: 14px;
+  color: #999;
+}
+.cta-button.data-v-96c6bf44 {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff5722;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+}

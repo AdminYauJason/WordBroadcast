@@ -1,0 +1,1 @@
+<view class="auth-container"><view class="auth-card"><image class="logo" src="{{a}}" mode="aspectFit"></image><view class="title">授权登录</view><view class="desc">请授权获取您的用户信息</view><button class="auth-btn" bindtap="{{b}}" type="primary"> 授权登录 </button><button class="cancel-btn" bindtap="{{c}}" type="default"> 取消 </button></view></view>

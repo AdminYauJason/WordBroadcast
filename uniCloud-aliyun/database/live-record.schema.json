@@ -1,0 +1,46 @@
+{
+  "bsonType": "object",
+  "required": ["userPhone", "roomId", "startTime"],  // 必须字段
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成",
+      "bsonType": "objectId"  // 定义 _id 为自动生成的 ObjectId 类型
+    },
+    "userPhone": {
+      "description": "用户手机号",
+      "bsonType": "string",
+      "pattern": "^1[3-9]\\d{9}$",
+      "errorMessage": "手机号格式不正确"
+    },
+    "roomId": {
+      "description": "直播间ID",
+      "bsonType": "string",
+      "minLength": 10,   // 至少 10 个字符
+      "maxLength": 255  // 最多 255 个字符
+    },
+    "startTime": {
+      "description": "直播开始时间",
+      "bsonType": "timestamp"
+    },
+    "productInfo": {
+        "description": "产品信息",
+        "bsonType": "string",
+        "default": "未知产品",  // 设置默认值
+        "minLength": 0,
+        "maxLength": 5000
+    }
+  },
+   "permission": {
+      "read": true,
+      "create": "auth.uid != null",
+      "update": "auth.uid == doc.userPhone",
+      "delete": false
+    },
+    "errorMessage": {
+      "required": {
+        "userPhone": "用户手机号不能为空",
+        "roomId": "直播间ID不能为空",
+        "startTime": "开始时间不能为空"
+      }
+    }
+  }

@@ -1,0 +1,7 @@
+{
+  "name": "submitscript",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "submitliverecord",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

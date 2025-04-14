@@ -1,0 +1,7 @@
+{
+  "name": "saveBotScript",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

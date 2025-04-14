@@ -1,0 +1,7 @@
+{
+  "name": "getuserliveRecord",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

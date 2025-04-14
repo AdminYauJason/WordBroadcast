@@ -1,0 +1,87 @@
+{
+  "pages": [
+    "pages/launch/launch",
+    "pages/home_page/home_page",
+    "pages/grid/grid",
+    "pages/list/search/search",
+    "pages/list/detail",
+    "pages/ucenter/ucenter",
+    "pages/uni-agree/uni-agree",
+    "pages/ucenter/settings/settings",
+    "uni_modules/uni-pay/pages/success/success",
+    "uni_modules/uni-pay/pages/ad-interactive-webview/ad-interactive-webview",
+    "uni_modules/uni-pay/pages/pay-desk/pay-desk",
+    "pages/Robot/Robot",
+    "pages/list/list",
+    "pages/confirm/confirm",
+    "pages/live_record/live_record",
+    "pages/wallet/wallet",
+    "pages/auth/auth"
+  ],
+  "subPackages": [
+    {
+      "root": "uni_modules/uni-feedback",
+      "pages": [
+        "pages/opendb-feedback/opendb-feedback"
+      ]
+    },
+    {
+      "root": "uni_modules/uni-id-pages/pages",
+      "pages": [
+        "userinfo/userinfo",
+        "userinfo/realname-verify/realname-verify",
+        "login/login-withoutpwd",
+        "login/login-withpwd",
+        "userinfo/deactivate/deactivate",
+        "userinfo/bind-mobile/bind-mobile",
+        "login/login-smscode",
+        "register/register",
+        "retrieve/retrieve",
+        "common/webview/webview",
+        "userinfo/change_pwd/change_pwd",
+        "register/register-by-email",
+        "retrieve/retrieve-by-email",
+        "userinfo/set-pwd/set-pwd"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "我的Robot",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F8F8F8",
+    "enablePullDownRefresh": false,
+    "rpxCalcMaxDeviceWidth": 375,
+    "rpxCalcBaseDeviceWidth": 375
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home_page/home_page",
+        "iconPath": "static/tabbar/list.png",
+        "selectedIconPath": "static/tabbar/list_active.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/grid/grid",
+        "iconPath": "static/tabbar/grid.png",
+        "selectedIconPath": "static/tabbar/grid_active.png",
+        "text": "话术生成"
+      },
+      {
+        "pagePath": "pages/ucenter/ucenter",
+        "iconPath": "static/tabbar/me.png",
+        "selectedIconPath": "static/tabbar/me_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "uniCloud": {
+    "spaceId": "mp-797aa145-91b6-4b18-a885-d123f5829b6e"
+  },
+  "usingComponents": {}
+}
