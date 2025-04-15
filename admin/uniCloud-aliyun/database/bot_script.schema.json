@@ -1,0 +1,50 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+  "bsonType": "object",
+  "required": ["aiScript", "tokens", "beijingTime", "traderWords", "roomId", "userPhone"],  // 必填字段
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成",
+      "bsonType": "objectId"  // 定义 _id 为自动生成的 ObjectId 类型
+    },
+    "aiScript": {
+      "description": "机器人执行的 AI 脚本内容",
+      "bsonType": "string",
+      "minLength": 1,  // 最小长度 1，不能为空
+      "maxLength": 10000000000  // 最大长度可根据实际情况调整，假设最大为10000字符
+    },
+    "tokens": {
+      "description": "机器人执行过程中产生的代币数量",
+      "bsonType": "int",
+      "minimum": 0  // 代币数量不能为负数
+    },
+    "beijingTime": {
+      "description": "脚本执行的时间",
+      "bsonType": "date"
+    },
+    "traderWords": {
+      "description": "交易者的发言内容",
+      "bsonType": "string",
+      "minLength": 0,  // 允许为空
+      "maxLength": 100000000000  // 最大长度可根据实际情况调整
+    },
+    "roomId": {
+      "description": "直播房间ID",
+      "bsonType": "string",
+      "minLength": 10,   // 至少 10 个字符
+      "maxLength": 255  // 最多 255 个字符
+    },
+    "userPhone": {
+      "description": "用户的手机号",
+      "bsonType": "string",
+      "minLength": 11,  // 假设最短手机号为11位
+      "maxLength": 15   // 最大长度为 15 位（适应不同国家的手机号）
+    }
+  },
+  "permission": {
+    "read": true,   // 允许读取
+    "create": true, // 允许创建
+    "update": true, // 允许更新
+    "delete": false // 禁止删除
+  }
+}

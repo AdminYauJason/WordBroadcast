@@ -1,0 +1,47 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+  "bsonType": "object",
+  "required": ["userPhone", "roomId", "startTime"],
+  "properties": {
+    "_id": {
+      "description": "ID，系统自动生成",
+      "bsonType": "objectId"
+    },
+    "userPhone": {
+      "description": "用户手机号",
+      "bsonType": "string",
+      "pattern": "^1[3-9]\\d{9}$",
+      "errorMessage": "手机号格式不正确"
+    },
+    "roomId": {
+      "description": "直播间ID",
+      "bsonType": "string",
+      "minLength": 10,
+      "maxLength": 255
+    },
+    "startTime": {
+      "description": "直播开始时间",
+      "bsonType": "date"
+    },
+    "productInfo": {
+      "description": "产品信息",
+      "bsonType": "string",
+      "default": "未知产品",
+      "minLength": 0,
+      "maxLength": 5000
+    }
+  },
+  "permission": {
+    "read": true,
+    "create": "auth.uid != null",
+    "update": "auth.uid == doc.userPhone",
+    "delete": false
+  },
+  "errorMessage": {
+    "required": {
+      "userPhone": "用户手机号不能为空",
+      "roomId": "直播间ID不能为空",
+      "startTime": "开始时间不能为空"
+    }
+  }
+}
